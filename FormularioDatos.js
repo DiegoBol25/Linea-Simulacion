@@ -3,10 +3,10 @@ import '../hojas-de-estilos/FormularioDatos.css';
 
 function FormInputComponent({ onSubmit }) {
     const [inputValues, setInputValues] = useState({
-        amplitud: '10',
-        frequency: '1',
-        phase: '30',
-        longitud: '40',
+        amplitud: '100',
+        frequency: '110000000',
+        phase: '90',
+        longitud: '100',
         generatorImpedance: { Rg: 0, Xg: 0 },
         loadImpedance: { Rl: 1, Xl: 1 },
         cableType: 'coaxial',
@@ -96,7 +96,7 @@ function FormInputComponent({ onSubmit }) {
                  name="amplitud" 
                  value={inputValues.amplitud} 
                  onChange={handleChange} 
-                 placeholder="Amplitud"
+                 placeholder="0"
                  />
             </div>
             <div>
@@ -105,7 +105,7 @@ function FormInputComponent({ onSubmit }) {
                 name="frequency" 
                 value={inputValues.frequency} 
                 onChange={handleChange} 
-                placeholder="Frecuencia"
+                placeholder="0"
                 />
                 
             </div>
@@ -114,7 +114,9 @@ function FormInputComponent({ onSubmit }) {
                 <input type="number" 
                 name="phase" 
                 value={inputValues.phase} 
-                onChange={handleChange} />
+                onChange={handleChange} 
+                placeholder="0"
+                />
             </div>
 
             <div>
@@ -122,7 +124,9 @@ function FormInputComponent({ onSubmit }) {
                 <input type="number" 
                 name="longitud" 
                 value={inputValues.longitud} 
-                onChange={handleChange} />
+                onChange={handleChange} 
+                placeholder="0"
+                />
             </div>
 
             <div>
@@ -130,21 +134,23 @@ function FormInputComponent({ onSubmit }) {
                 <input type="number" 
                 name="generatorImpedance.Rg" 
                 value={inputValues.generatorImpedance.Rg} 
-                onChange={handleChange} />
+                onChange={handleChange} 
+                placeholder="0"/>
             </div>
             <div>
                 <label>Impedancia del generador (Im) jXg:</label>
                 <input type="number" 
                 name="generatorImpedance.Xg" 
                 value={inputValues.generatorImpedance.Xg}
-                onChange={handleChange} />
+                onChange={handleChange} 
+                placeholder="0"/>
             </div>
             <div>
                 <label>Impedancia de la carga (Re) Rl:</label>
                 <input type="number" 
                 name="loadImpedance.Rl" 
                 value={inputValues.loadImpedance.Rl} 
-                onChange={handleChange} />
+                onChange={handleChange} placeholder="0"/>
             </div>
 
             <div>
@@ -152,7 +158,7 @@ function FormInputComponent({ onSubmit }) {
                 <input type="number" 
                 name="loadImpedance.Xl" 
                 value={inputValues.loadImpedance.Xl} 
-                onChange={handleChange} />
+                onChange={handleChange} placeholder="0"/>
             </div>
 
             <div>
