@@ -36,6 +36,9 @@ function Graficas({ inputValues }) {
 
     let R, L, G, C, Z0, gamma;
 
+    //PUSE ESTA FUNCION AQUI PARA PODER CALCULAR LOS VALORES DE R,C,L,G. Los calcula
+    //ya que son atributos de funciones gamma y Z0
+    
     function calcularCoaxial() {
       if (!radioInterno || !radioExterno || !conductividad || radioInterno <= 0 || radioExterno <= 0) {
         console.error("Error: Parámetros de radio o conductividad inválidos en coaxial.");
